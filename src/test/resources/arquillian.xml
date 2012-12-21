@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://jboss.com/arquillian" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:glassfish="urn:arq:org.jboss.arquillian.container.glassfish.embedded_31">
+	<container qualifier="glassfish" default="true">
+		<configuration>
+			<property name="sunResourcesXml">src/test/config/glassfish31/setup/glassfish-resources.xml</property>
+		</configuration>
+	</container>
+	 <defaultProtocol type="Servlet 3.0"/>
+    <container qualifier="jbossas-managed" default="false">
+        <configuration>
+            <property name="jbossHome">c:/jboss-as-7.1.1.Final</property>
+        </configuration>
+    </container>
+	<engine>
+		<property name="deploymentExportPath">target</property>
+	</engine>
+</arquillian>
